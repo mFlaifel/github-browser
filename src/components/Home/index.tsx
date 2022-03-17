@@ -30,10 +30,10 @@ export const Home = () => {
   }, [user]);
 
   return (
-    <div>
+    <div className='home-page'>
       <div id='google_translate_element'></div>
       <h1>GitHub Browser</h1>
-      <div>
+      <div className='home-page-input'>
         <Input user={user} setUser={setUser} />
       </div>
       <div className='result-container'>
@@ -44,7 +44,6 @@ export const Home = () => {
             {console.log('error', error)}
           </div>
         )}
-        {console.log(data)}
         {data?.items?.length > 0 &&
           data.items.map((item: UserInterface) => {
             return <User {...item} />;

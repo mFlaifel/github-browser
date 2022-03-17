@@ -2,3 +2,23 @@
   background-color: black;
   color: white;
 }
+
+.home-page {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.home-page-input {
+  width: 90%;
+}
+
+.result-container {
+  width: 80%;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}

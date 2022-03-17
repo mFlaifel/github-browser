@@ -5,6 +5,7 @@
   width: 100%;
   background-color: #171a22;
   padding-left: 1rem;
+  color: white;
 }
 
 .custom-input:focus {

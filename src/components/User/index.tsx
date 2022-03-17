@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { UserInterface } from '../../interfaces';
+import { useFetch } from '../../utils/useFetch';
 import { Modal } from '../Modal';
+import { UserRepo } from '../UserRepo';
 import './index.css';
 
-export const User: React.FC<UserInterface> = ({
-  id,
-  avatar_url,
-  login,
-  ...props
-}) => {
+export const User: React.FC<UserInterface> = ({ id, avatar_url, login }) => {
   const [show, setShow] = useState(false);
+  const { data } = useFetch(`https://api.github.com/users/${login}`);
+  const repos = useFetch(`https://api.github.com/users/${login}/repos`);
   return (
     <div key={id} className='user-item' onClick={() => setShow(true)}>
       <img src={avatar_url} alt='' />
@@ -19,7 +18,26 @@ export const User: React.FC<UserInterface> = ({
         onClose={() => {
           setShow(false);
         }}
-        userName={login}
+        title={login}
+        body={
+          <>
+            <ul>
+              {data?.location && <li>Location:{data.location}</li>}
+              {data?.bio && <li>Bio: {data.bio}</li>}
+              {data?.type && <li>account Type: {data.type}</li>}
+            </ul>
+            {repos?.data?.length > 0 && (
+              <div>
+                repos:
+                <ul className='user-repo'>
+                  {repos.data.map((repo: any) => (
+                    <UserRepo name={repo.name} />
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        }
       />
     </div>
   );
