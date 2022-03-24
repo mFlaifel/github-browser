@@ -1,9 +1,23 @@
-body {
-  background-color: #0d1117;
-  color: #c9d1d9;
+:root {
+  --main: #007eff;
+  --white: #ffffff;
+  --black: #25282b;
+  --warning: #f6a609;
+  --warning-light: #ffbc1f;
+  --warning-dark: #e89806;
+  --success: #2ac769;
+  --success-light: #40dd7f;
+  --success-dark: #1ab759;
+  --danger: #fb4e4e;
+  --danger-light: #ff6262;
+  --danger-dark: #e93c3c;
+  --background-color: #f9f9fa;
+  --text: #25282b;
+  --text-secondary: #52575c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--background-color);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { UserInterface } from '../../interfaces';
 import { useFetch } from '../../utils/useFetch';
-import { Modal } from '../Modal';
+import { Modal } from '../shared/Modal';
 import { UserRepo } from '../UserRepo';
 import './index.css';
 

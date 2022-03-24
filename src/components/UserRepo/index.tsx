@@ -1,5 +1,5 @@
 import { ReactChild, ReactFragment, ReactPortal, useState } from 'react';
-import { Modal } from '../Modal';
+import { Modal } from '../shared/Modal';
 
 export const UserRepo = (props: {
   name: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined;

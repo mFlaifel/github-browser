@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { UserInterface } from '../../interfaces';
-import { Input } from '../Input';
+import { Input } from '../shared/Input';
 import { User } from '../User';
 import './index.css';
 export const Home = () => {
