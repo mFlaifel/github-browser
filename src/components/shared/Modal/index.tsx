@@ -1,4 +1,5 @@
 import { MouseEventHandler } from 'react';
+import { CustomButton } from '../CustomButton';
 import './index.css';
 
 export const Modal = (props: {
@@ -15,7 +16,7 @@ export const Modal = (props: {
         <h3> {props.title}</h3>
         <div className='modal-body'>{props.body}</div>
         <div className='modal-actions'>
-          <button onClick={props.onClose}>close</button>
+          <CustomButton onClick={props.onClose} text='close' />
         </div>
       </div>
     </div>

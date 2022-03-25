@@ -13,7 +13,7 @@
 
 .modal-content {
   width: 500px;
-  background-color: black;
+  background-color: var(--white);
   border-radius: 5px;
   border: 1px solid darkgray;
   max-height: 100vh;
@@ -27,7 +27,7 @@
 
 .modal-body {
   padding: 1rem;
-  border-top: 1px solid darkgray;
+  /* border-top: 1px solid darkgray; */
   /* border-bottom: 1px solid darkgray; */
 }
 
@@ -40,8 +40,8 @@
   justify-content: center;
 }
 .modal-actions button {
-  background-color: black;
-  color: white;
+  /* background-color: black; */
+  /* color: white; */
   padding: 0.5rem 3rem;
   border-radius: 5px;
   margin-bottom: 0.5rem;

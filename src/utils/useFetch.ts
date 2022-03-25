@@ -6,6 +6,7 @@ export const useFetch = (url: string, method = 'GET') => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log(process.env.REACT_APP_API_KEY);
     setLoading(true);
     fetch(url, {
       method,

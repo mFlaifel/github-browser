@@ -21,6 +21,7 @@ export const User: React.FC<UserInterface> = ({ id, avatar_url, login }) => {
         title={login}
         body={
           <>
+            <b>User information</b>
             <ul>
               {data?.location && <li>Location:{data.location}</li>}
               {data?.bio && <li>Bio: {data.bio}</li>}
@@ -28,7 +29,7 @@ export const User: React.FC<UserInterface> = ({ id, avatar_url, login }) => {
             </ul>
             {repos?.data?.length > 0 && (
               <div>
-                repos:
+                <b>repos:</b>
                 <ul className='user-repo'>
                   {repos.data.map((repo: any) => (
                     <UserRepo name={repo.name} />

@@ -34,7 +34,7 @@ export const Home = () => {
       <div id='google_translate_element'></div>
       <h1>GitHub Browser</h1>
       <div className='home-page-input'>
-        <Input user={user} setUser={setUser} />
+        <Input value={user} setValue={setUser} />
       </div>
       <div className='result-container'>
         {loading && <div>loading ....</div>}
