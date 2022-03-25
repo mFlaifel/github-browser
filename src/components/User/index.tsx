@@ -20,7 +20,7 @@ export const User: React.FC<UserInterface> = ({ id, avatar_url, login }) => {
         }}
         title={login}
         body={
-          <>
+          <div className='user-modal'>
             <b>User information</b>
             <ul>
               {data?.location && <li>Location:{data.location}</li>}
@@ -28,16 +28,21 @@ export const User: React.FC<UserInterface> = ({ id, avatar_url, login }) => {
               {data?.type && <li>account Type: {data.type}</li>}
             </ul>
             {repos?.data?.length > 0 && (
-              <div>
+              <div className='modal-repo-text'>
                 <b>repos:</b>
                 <ul className='user-repo'>
                   {repos.data.map((repo: any) => (
-                    <UserRepo name={repo.name} />
+                    <UserRepo
+                      repoName={repo.name}
+                      userName={login}
+                      setShow={setShow}
+                      key={repo.id}
+                    />
                   ))}
                 </ul>
               </div>
             )}
-          </>
+          </div>
         }
       />
     </div>

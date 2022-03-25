@@ -32,7 +32,7 @@ export const Home = () => {
   return (
     <div className='home-page'>
       <div id='google_translate_element'></div>
-      <h1>GitHub Browser</h1>
+      <h1 className='home-title'>GitHub Browser</h1>
       <div className='home-page-input'>
         <Input value={user} setValue={setUser} />
       </div>
@@ -46,7 +46,7 @@ export const Home = () => {
         )}
         {data?.items?.length > 0 &&
           data.items.map((item: UserInterface) => {
-            return <User {...item} />;
+            return <User key={item.id} {...item} />;
           })}
       </div>
     </div>
