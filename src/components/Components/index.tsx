@@ -8,8 +8,10 @@ import { TextField } from '../shared/TextField';
 import { Reply } from '../shared/Reply';
 import avatar from '../../assets/avatar.jpg';
 import { Menu } from '../Menu';
-
+import folder from '../../assets/folder.svg';
 export const Components = () => {
+  // menu component
+  const [selectedMenu, setSelectedMenu] = useState(1);
   const [value, setValue] = useState('');
   return (
     <>
@@ -36,11 +38,18 @@ export const Components = () => {
       <p>reply</p>
       <Reply avatar={avatar} />
       <br />
+      <p>Menu</p>
+      <Menu
+        data={[
+          { value: 1, label: 'option 1' },
+          { value: 2, label: 'option2', icon: folder },
+        ]}
+        value={selectedMenu}
+        setValue={setSelectedMenu}
+      />
+      <br />
       <p>Drop Down</p>
       <DropDown />
-      <br />
-      <p>Menu</p>
-      <Menu />
     </>
   );
 };
