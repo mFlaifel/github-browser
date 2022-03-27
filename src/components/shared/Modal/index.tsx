@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { CustomButton } from '../CustomButton';
 import './index.css';
 
@@ -7,11 +8,20 @@ export const Modal = (props: {
   body: any;
   title: string;
 }) => {
-  if (!props.show) return null;
+  const [isAnimating, setIsAnimating] = useState(false);
 
+  useEffect(() => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 1000);
+  }, [props.show]);
+  if (!props.show) return null;
   return (
     <div
-      className='modal'
+      className={`modal ${isAnimating} ${
+        !isAnimating && props.show && 'is-open'
+      }`}
       onClick={() => {
         console.log('close');
         props.onClose();
