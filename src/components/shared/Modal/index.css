@@ -1,0 +1,57 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+/* .modal.isAnimating {
+  left: -100;
+  transition: all 0.3s;
+}
+
+.modal.is-open {
+  left: 0;
+  transition: all 0.3s;
+} */
+
+.modal-content {
+  width: 500px;
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  max-height: 100vh;
+  padding: 1rem;
+}
+.modal-content h3 {
+  margin-left: 2rem;
+}
+.modal-header {
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.user-repo {
+  height: 400px;
+  overflow-y: auto;
+}
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+.modal-actions button {
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
