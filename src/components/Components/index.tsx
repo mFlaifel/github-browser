@@ -13,6 +13,9 @@ export const Components = () => {
   // menu component
   const [selectedMenu, setSelectedMenu] = useState(1);
   const [value, setValue] = useState('');
+
+  //dropdown component
+  const [dropDownValue, setDropDownValue] = useState('');
   return (
     <>
       <button onClick={() => setValue('new value')}>Click cme</button>
@@ -49,7 +52,20 @@ export const Components = () => {
       />
       <br />
       <p>Drop Down</p>
-      <DropDown />
+      <DropDown value={dropDownValue} setValue={setDropDownValue} />
+      <br />
+      <p>Users sam as menu</p>
+      <Menu
+        type='user'
+        name='Savannah Miles'
+        icon={avatar}
+        data={[
+          { value: 1, label: 'Savannah Miles', icon: avatar },
+          { value: 2, label: 'Savannah Miles', icon: avatar },
+        ]}
+        value={selectedMenu}
+        setValue={setSelectedMenu}
+      />
     </>
   );
 };

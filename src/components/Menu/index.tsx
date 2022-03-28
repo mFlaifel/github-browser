@@ -10,6 +10,7 @@ interface Props {
   icon?: string;
   value?: string | number | undefined;
   setValue?: any;
+  type?: 'user' | 'menu';
 }
 
 export const Menu: FC<Props> = ({
@@ -19,6 +20,7 @@ export const Menu: FC<Props> = ({
     { value: 1, label: 'option 1', icon: folder },
     { value: 2, label: 'option2', icon: folder },
   ],
+  type = 'menu',
   value,
   setValue,
   ...props
@@ -47,8 +49,14 @@ export const Menu: FC<Props> = ({
         }`}
         onClick={handleOpen}
       >
-        <div className={`menu-item-flex menu-hover`}>
-          {selectedIcon && <img src={selectedIcon} alt='menu title' />}
+        <div className={`menu-item-flex`}>
+          {selectedIcon && (
+            <img
+              src={selectedIcon}
+              className={type === 'user' ? 'menu-item-user-avatar' : ''}
+              alt='menu title'
+            />
+          )}
           <p className='custom-menu-title' {...props}>
             {selectedName}
           </p>
@@ -63,9 +71,10 @@ export const Menu: FC<Props> = ({
             <div
               className='menu-item-flex menu-hover'
               onClick={() => handleSelect(item.value, item.label, item?.icon)}
+              key={item.value}
             >
               {item?.icon && <img src={item.icon} alt='menu option' />}
-              <p key={item.value}>{item.label}</p>
+              <p>{item.label}</p>
             </div>
           ))}
         </div>
