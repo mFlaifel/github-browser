@@ -23,7 +23,6 @@ export const Modal = (props: {
         !isAnimating && props.show && 'is-open'
       }`}
       onClick={() => {
-        console.log('close');
         props.onClose();
       }}
     >
