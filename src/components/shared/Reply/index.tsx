@@ -15,7 +15,7 @@ export const Reply: FC<Props> = ({ avatar, ...props }) => {
         <TextField value={comment} setValue={setComment} {...props} />
       </div>
       <div className='reply-button-group'>
-        <CustomButton text='Add Comment' />
+        <CustomButton text='Add Comment' onClick={() => setComment(comment)} />
       </div>
     </div>
   );

@@ -13,12 +13,16 @@ export const TextField: FC<Props> = ({
   placeholder = 'Enter your comment here',
   ...props
 }) => {
+  const handleChange = (e: { target: { value: string } }) => {
+    setValue(e.target.value);
+  };
+
   return (
     <textarea
       className='custom-text-field'
       placeholder={placeholder}
       value={value || ''}
-      onChange={setValue}
+      onChange={handleChange}
       {...props}
     />
   );
