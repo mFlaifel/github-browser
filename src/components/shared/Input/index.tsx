@@ -36,7 +36,7 @@ export const Input: React.FC<Props> = ({
       className='custom-input'
       placeholder={placeholder}
       onKeyUp={handleInputFinished}
-      onChange={type === 'search' ? handleChange : setValue}
+      onChange={handleChange}
     />
   );
 };
