@@ -13,18 +13,20 @@ export const Components = () => {
   // menu component
   const [selectedMenu, setSelectedMenu] = useState(1);
   const [value, setValue] = useState('');
+  //input
+  const [inputValue, setInputValue] = useState('');
 
   //dropdown component
   const [dropDownValue, setDropDownValue] = useState('');
   return (
     <>
-      <button onClick={() => setValue('new value')}>Click cme</button>
+      <button onClick={() => setInputValue('new value')}>Click cme</button>
       <br />
       <p>button</p>
       <CustomButton text={'Click me'} onClick={undefined} color={'main'} />
       <br />
       <p>input</p>
-      <Input value={value} setValue={setValue} />
+      <Input value={inputValue} setValue={setInputValue} />
       <br />
       <p>like</p>
       <LikeDislike numberOfLikesDislikes={10} />

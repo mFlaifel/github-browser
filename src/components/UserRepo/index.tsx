@@ -38,7 +38,6 @@ export const UserRepo = (props: {
         title={props.repoName + ' repo issues'}
         body={
           <>
-            {console.log(data)}
             {data?.length > 0
               ? data.map(
                   (item: {

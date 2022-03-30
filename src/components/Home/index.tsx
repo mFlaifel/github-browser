@@ -19,9 +19,6 @@ export const Home = () => {
         .catch(setError)
         .finally(() => {
           setLoading(false);
-          console.log('data', data);
-          console.log('error', error);
-          console.log('loading', loading);
         });
     }
 
@@ -34,16 +31,11 @@ export const Home = () => {
       <div id='google_translate_element'></div>
       <h1 className='home-title'>GitHub Browser</h1>
       <div className='home-page-input'>
-        <Input value={user} setValue={setUser} />
+        <Input value={user} setValue={setUser} type='search' />
       </div>
       <div className='result-container'>
         {loading && <div>loading ....</div>}
-        {error?.message && (
-          <div>
-            {error.message}
-            {console.log('error', error)}
-          </div>
-        )}
+        {error?.message && <div>{error.message}</div>}
         {data?.items?.length > 0 &&
           data.items.map((item: UserInterface) => {
             return <User key={item.id} {...item} />;
