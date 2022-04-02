@@ -1,0 +1,37 @@
+.slider-container {
+  position: relative;
+}
+
+.slider-image {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 0px 0px 316.5px 316.5px;
+}
+
+.container-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.dot.active {
+  border: 3px solid #007eff;
+}
+
+/* media query for tablet and phone */
+@media screen and (max-width: 768px) {
+  .slider-image {
+    border-radius: 0;
+  }
+}
