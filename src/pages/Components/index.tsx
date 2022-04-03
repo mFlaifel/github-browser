@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { CustomButton } from '../shared/CustomButton';
-import { Input } from '../shared/Input';
-import { LikeDislike } from '../shared/LikeDislike';
-import { Comment } from '../shared/Comment';
-import { DropDown } from '../shared/DropDown';
-import { TextField } from '../shared/TextField';
-import { Reply } from '../shared/Reply';
+import { CustomButton } from '../../components/shared/CustomButton';
+import { Input } from '../../components/shared/Input';
+import { LikeDislike } from '../../components/shared/LikeDislike';
+import { Comment } from '../../components/shared/Comment';
+import { DropDown } from '../../components/shared/DropDown';
+import { TextField } from '../../components/shared/TextField';
+import { Reply } from '../../components/shared/Reply';
 import avatar from '../../assets/avatar.jpg';
-import { Menu } from '../Menu';
+import { Menu } from '../../components/Menu';
 import folder from '../../assets/folder.svg';
 export const Components = () => {
   // menu component

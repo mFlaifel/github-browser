@@ -40,11 +40,9 @@ export const DropDown: FC<Props> = ({
   return (
     <div className={`drop-down-container`}>
       <div className={`drop-down-first-item`} onClick={handleOpen}>
-        <div className={`drop-down-item-flex drop-down-hover`}>
+        <div className={`drop-down-item-flex`}>
           {selectedIcon && <img src={selectedIcon} alt='drop-down title' />}
-          <p className='custom-drop-down-title' {...props}>
-            {selectedName}
-          </p>
+          <p {...props}>{selectedName}</p>
         </div>
         <img src={down} alt='selected' className='selected-icon' />
       </div>

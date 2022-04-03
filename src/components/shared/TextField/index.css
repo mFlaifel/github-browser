@@ -1,10 +1,16 @@
 .custom-text-field {
   width: 100%;
-  min-height: 4.5rem;
+  min-height: 4rem;
   border: 1px solid #a0a4a8;
   box-sizing: border-box;
   border-radius: 8px;
   padding: 0.75rem 1rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
 }
 
 .custom-text-field:focus {

@@ -1,10 +1,15 @@
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
 .comment-avatar {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.comment-avatar img {
+.comment img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -34,4 +39,9 @@
 .comment-action-like {
   display: flex;
   gap: 2rem;
+}
+
+.comment-reply {
+  text-decoration: none;
+  margin-top: 1rem;
 }

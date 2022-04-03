@@ -17,25 +17,27 @@ export const Comment: React.FC<Props> = ({
 }) => {
   return (
     <div className='comment'>
-      <div className='comment-avatar'>
-        {avatar ? <img src={avatar} alt='avatar' /> : ''}
-        <div>
-          <p className='comment-user-name'>{userName}</p>
-          <p className='comment-date'>{date}</p>
-        </div>
-      </div>
-      <div className='comment-body'>
-        <div className='comment-text'>
-          <p>{comment}</p>
-        </div>
-        <div className='comment-actions'>
-          <div className='comment-action-like'>
-            <LikeDislike numberOfLikesDislikes={10} />{' '}
-            <LikeDislike numberOfLikesDislikes={1} />
+      {avatar ? <img src={avatar} alt='avatar' /> : ''}
+      <div>
+        <div className='comment-avatar'>
+          <div>
+            <p className='comment-user-name'>{userName}</p>
+            <p className='comment-date'>{date}</p>
           </div>
-          <a href='/' className='comment-reply'>
-            Reply
-          </a>
+        </div>
+        <div className='comment-body'>
+          <div className='comment-text'>
+            <p>{comment}</p>
+          </div>
+          <div className='comment-actions'>
+            <div className='comment-action-like'>
+              <LikeDislike numberOfLikesDislikes={10} />{' '}
+              <LikeDislike numberOfLikesDislikes={1} />
+            </div>
+            <a href='/' className='comment-reply'>
+              Reply
+            </a>
+          </div>
         </div>
       </div>
     </div>

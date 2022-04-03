@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { UserInterface } from '../../interfaces';
-import { Input } from '../shared/Input';
-import { User } from '../User';
+import { Input } from '../../components/shared/Input';
+import { User } from '../../components/User';
 import './index.css';
 export const Home = () => {
   const [user, setUser] = useState('');
