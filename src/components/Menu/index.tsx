@@ -61,12 +61,12 @@ export const Menu: FC<Props> = ({
             {selectedName}
           </p>
         </div>
-        {isSelected && (
+        {isSelected && !open && (
           <img src={trueIcon} alt='selected' className='selected-icon' />
         )}
       </div>
       {open && (
-        <div className='menu-items-container'>
+        <div className={`menu-items-container ${open ? 'z-1' : ''}`}>
           {data?.map((item: Data) => (
             <div
               className='menu-item-flex menu-hover'

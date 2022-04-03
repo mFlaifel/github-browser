@@ -47,7 +47,7 @@ export const DropDown: FC<Props> = ({
         <img src={down} alt='selected' className='selected-icon' />
       </div>
       {open && (
-        <div className='drop-down-items-container'>
+        <div className={`drop-down-items-container ${open ? 'z-1' : ''}`}>
           {options?.map((item: any) => (
             <div
               className='drop-down-item-flex'
