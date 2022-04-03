@@ -1,10 +1,16 @@
 import { NavBar } from '../../components/NavBar';
 import { Comment } from '../../components/shared/Comment';
 import avatar from '../../assets/avatar.jpg';
-import { navBarList, sliderImages, socialMediaList } from './data';
+import {
+  navBarList,
+  sliderImages,
+  socialMediaList,
+  stepperItems,
+} from './data';
 import './index.css';
 import { Reply } from '../../components/shared/Reply';
 import { Slider } from '../../components/Slider';
+import { Product } from '../../components/Product';
 
 export const Landing = () => {
   return (
@@ -37,8 +43,16 @@ export const Landing = () => {
           </div>
         </div>
       </div>
-      <div className='landing-product landing-width'>products</div>
-      <div className='landing-footer'>footer</div>
+      <div className='landing-product landing-width'>
+        <div className='landing-text-container'>
+          <h1 className='landing-title'>Your Product</h1>
+          <p className='landing-text'>
+            Give us a simple description of your product
+          </p>
+        </div>
+        <Product stepperItems={stepperItems} />
+      </div>
+      <div className='landing-footer'></div>
     </div>
   );
 };

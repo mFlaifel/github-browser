@@ -17,7 +17,7 @@
   transform: translateX(-50%);
   display: flex;
 }
-.dot {
+.slider-dot {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -25,7 +25,7 @@
   background: #f1f1f1;
   cursor: pointer;
 }
-.dot.active {
+.slider-dot-active {
   border: 3px solid #007eff;
 }
 

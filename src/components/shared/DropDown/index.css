@@ -25,3 +25,7 @@
   padding-right: 1rem;
   border-radius: 8px;
 }
+
+.drop-down-first-item:hover {
+  background-color: #e9f1f3;
+}

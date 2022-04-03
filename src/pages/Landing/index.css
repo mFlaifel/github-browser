@@ -25,7 +25,9 @@
 }
 
 /* container */
-
+.landing-container {
+  background-color: white;
+}
 .landing-width {
   max-width: 1200px;
   margin: auto;
@@ -67,6 +69,15 @@
   width: calc(50% - 1rem);
 }
 
+.landing-footer {
+  margin-top: 10rem;
+  height: 345px;
+  left: 0px;
+  top: 2702px;
+  background: #030b0e;
+  border-radius: 172.5px 172.5px 0px 0px;
+}
+
 /* media query for tablet and phone */
 @media screen and (max-width: 768px) {
   .landing-hero {
@@ -88,5 +99,10 @@
   }
   .landing-comments {
     margin-top: 1rem;
+  }
+  .landing-footer {
+    margin-top: 1rem;
+    border-radius: 8px 8px 0 0;
+    height: 2rem;
   }
 }

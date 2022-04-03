@@ -24,3 +24,5 @@ export const sliderImages = [
   { id: 2, src: slider_2 },
   { id: 3, src: slider_3 },
 ];
+
+export const stepperItems = ['First', 'Second', 'Third', 'Fourth'];

@@ -5,12 +5,14 @@ interface Props {
   value: string | null;
   setValue: any;
   placeholder?: string;
+  height?: string;
 }
 
 export const TextField: FC<Props> = ({
   value,
   setValue,
   placeholder = 'Enter your comment here',
+  height = 'auto',
   ...props
 }) => {
   const handleChange = (e: { target: { value: string } }) => {
@@ -23,6 +25,7 @@ export const TextField: FC<Props> = ({
       placeholder={placeholder}
       value={value || ''}
       onChange={handleChange}
+      style={{ height: height }}
       {...props}
     />
   );

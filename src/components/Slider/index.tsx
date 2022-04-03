@@ -36,8 +36,13 @@ export const Slider: FC<Props> = ({ items }) => {
       <div className='container-dots'>
         {Array.from({ length: items.length }).map((item, index) => (
           <div
+            key={index}
             onClick={() => moveDot(index)}
-            className={activeItem === index ? 'dot active' : 'dot'}
+            className={
+              activeItem === index
+                ? 'slider-dot slider-dot-active'
+                : 'slider-dot'
+            }
           ></div>
         ))}
       </div>
