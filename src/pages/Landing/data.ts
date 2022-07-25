@@ -9,8 +9,8 @@ export const navBarList = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/github' },
+  { name: 'Contact', href: '/components' },
 ];
 
 export const socialMediaList = [
